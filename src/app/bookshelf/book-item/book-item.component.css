@@ -1,0 +1,9 @@
+.book-card {
+  background-color: floralwhite;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.fav-icon {
+  color: darkred;
+}
