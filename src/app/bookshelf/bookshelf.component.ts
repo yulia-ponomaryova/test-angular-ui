@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Book} from "./book.model";
 
 @Component({
   selector: 'app-bookshelf',
   templateUrl: './bookshelf.component.html',
-  styleUrls: ['./bookshelf.component.css']
+  styleUrls: ['./bookshelf.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookshelfComponent implements OnInit {
 
