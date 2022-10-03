@@ -2,22 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { BookItemComponent } from './bookshelf/book-item/book-item.component';
-import { BookshelfComponent } from './bookshelf/bookshelf.component';
 
-import { MatCardModule } from "@angular/material/card";
+import {BookshelfModule} from "./bookshelf/bookshelf.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BookItemComponent,
-    BookshelfComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    MatCardModule
+    BookshelfModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
