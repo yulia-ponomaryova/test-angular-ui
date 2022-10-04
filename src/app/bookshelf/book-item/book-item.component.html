@@ -1,15 +1,14 @@
-
 <mat-card class="book-card">
   <div class="row col-md-12">
-    <div class="col-md-10">
-      <div style="text-align: center; font-weight: bold">{{book.title}}</div>
-      <div style="text-align: center">{{book.description}}</div>
+    <div class="col-md-11">
+      <div class="book-card_title">{{book.title}}</div>
+      <div class="book-card_description">{{book.description}}</div>
     </div>
-    <div class="col-md-2">
-      <a (click)="selectBook()">
-        <i [ngClass]="book.isFavorite ? 'fa fa-heart fa-2x' : 'fa fa-heart-o fa-2x'" class="fav-icon" >
-        </i>
-      </a>
+    <div class="col-md-1 pull-right">
+      <i class="book-card_fav-icon"
+         [ngClass]="showFavorite()"
+         (click)="markFavorite()">
+      </i>
     </div>
   </div>
 </mat-card>
