@@ -4,6 +4,16 @@
   margin: 20px;
 }
 
-.fav-icon {
+.book-card_title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.book-card_description {
+  text-align: center;
+}
+
+.book-card_fav-icon {
+  margin-top: 5px;
   color: darkred;
 }
