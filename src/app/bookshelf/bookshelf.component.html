@@ -1,6 +1,4 @@
 
 <div class="col-md-12">
-  <div *ngFor="let book of booksOnShelf">
-    <app-book-item [book]="book"></app-book-item>
-  </div>
+  <app-book-item *ngFor="let book of booksOnShelf" [book]="book"></app-book-item>
 </div>

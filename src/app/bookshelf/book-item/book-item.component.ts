@@ -11,7 +11,11 @@ export class BookItemComponent {
 
   @Input() book: Book;
 
-  selectBook() {
+  showFavorite() {
+    return this.book.isFavorite ? 'fa fa-heart fa-2x' : 'fa fa-heart-o fa-2x';
+  }
+
+  markFavorite() {
     this.book.isFavorite = !this.book.isFavorite;
   }
 
