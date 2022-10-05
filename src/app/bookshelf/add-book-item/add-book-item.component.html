@@ -1,11 +1,17 @@
-<mat-card class="add-book-card">
+<mat-card class="add-book-form">
   <div class="row">
-    <mat-label class="add-book-label">Title</mat-label>
-    <input matInput class="add-book-input" [(ngModel)]="bookToAdd.title" placeholder="Enter title">
+    <mat-label class="add-book-form_label">Title</mat-label>
+    <input matInput
+           class="add-book-form_input"
+           [(ngModel)]="bookToAdd.title"
+           placeholder="Enter title">
   </div>
   <div class="row">
-    <mat-label class="add-book-label">Description</mat-label>
-    <input matInput class="add-book-input" [(ngModel)]="bookToAdd.description" placeholder="Enter description">
+    <mat-label class="add-book-form_label">Description</mat-label>
+    <input matInput
+           class="add-book-form_input"
+           [(ngModel)]="bookToAdd.description"
+           placeholder="Enter description">
   </div>
 
   <div class="row">

@@ -1,15 +1,15 @@
-.add-book-card {
+.add-book-form {
   background-color: floralwhite;
   max-width: 400px;
   margin: 20px;
 }
 
-.add-book-label {
+.add-book-form_label {
   font-weight: bold;
   margin-left: 10px;
 }
 
-.add-book-input {
+.add-book-form_input {
   max-width: 350px;
   margin-top: 5px;
   margin-bottom: 10px;
