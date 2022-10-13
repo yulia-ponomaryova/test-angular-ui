@@ -12,7 +12,9 @@ export class BookItemComponent {
   @Input() book: Book;
 
   showFavorite() {
-    return this.book.isFavorite ? 'fa fa-heart fa-2x' : 'fa fa-heart-o fa-2x';
+    const HEART_SOLID = 'fa fa-heart fa-2x';
+    const HEART_REGULAR = 'fa fa-heart-o fa-2x';
+    return this.book.isFavorite ? HEART_SOLID : HEART_REGULAR;
   }
 
   markFavorite() {
