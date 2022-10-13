@@ -1,16 +1,12 @@
 <mat-card class="book-card">
-  <div class="row col-md-12">
-    <div class="col-md-11">
-      <div class="book-card_title">{{book.title}}</div>
-      <div class="book-card_description">{{book.description}}</div>
-    </div>
-    <div class="col-md-1 pull-right">
-      <i class="book-card_fav-icon"
-         [ngClass]="showFavorite()"
-         (click)="markFavorite()">
-      </i>
-    </div>
+  <div class="book-card-header">
+    <div class="book-card-header_title">{{book.title}}</div>
+    <div class="book-card-header_description">{{book.description}}</div>
   </div>
+  <i class="book-card_fav-icon"
+     [ngClass]="showFavorite()"
+     (click)="markFavorite()">
+  </i>
 </mat-card>
 
 

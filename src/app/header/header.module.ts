@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import {HeaderComponent} from "./header.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import {MatButtonModule} from "@angular/material/button";
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     MatToolbarModule,
     MatButtonModule
   ],
