@@ -1,22 +1,35 @@
-import { Component } from '@angular/core';
-import {Book} from "../book.model";
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {BookService} from "../book.service";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-add-book-item',
   templateUrl: './add-book-item.component.html',
-  styleUrls: ['./add-book-item.component.css']
+  styleUrls: ['./add-book-item.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AddBookItemComponent {
+export class AddBookItemComponent implements OnInit {
 
-  bookToAdd: Book = new Book();
+  bookAddForm: FormGroup;
 
   constructor(private bookService: BookService) {}
 
+  ngOnInit(): void {
+    this.clearForm();
+  }
+
   addBook() {
-    let book = this.bookToAdd;
+    let book = this.bookAddForm.value;
     this.bookService.addBook(book);
-    this.bookToAdd = new Book();
+    this.clearForm();
+  }
+
+  clearForm() {
+    this.bookAddForm = new FormGroup({
+      title: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      isFavorite: new FormControl(false)
+    });
   }
 
 }
