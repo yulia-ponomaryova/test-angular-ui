@@ -1,12 +1,14 @@
 <mat-card class="book-card">
-  <div class="book-card-header">
-    <div class="book-card-header_title">{{book.title}}</div>
-    <div class="book-card-header_description">{{book.description}}</div>
-  </div>
-  <i class="book-card_fav-icon"
-     [ngClass]="showFavorite()"
-     (click)="markFavorite()">
-  </i>
+  <mat-card-title-group>
+    <mat-card-title>{{book.title}}</mat-card-title>
+    <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+    <i class="book-card_fav-icon"
+       [ngClass]="showFavorite()"
+       (click)="markFavorite()">
+    </i>
+  </mat-card-title-group>
+  <mat-card-content>
+    {{book.description}}
+  </mat-card-content>
 </mat-card>
-
 
