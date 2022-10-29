@@ -1,0 +1,19 @@
+.library-book-card {
+  display: flex;
+  background-color: floralwhite;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.library-book-card-header {
+  flex-grow: 1;
+}
+
+.library-book-card-header_title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.library-book-card-header_description {
+  text-align: center;
+}
