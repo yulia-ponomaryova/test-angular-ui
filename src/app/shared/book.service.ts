@@ -9,17 +9,20 @@ export class BookService {
   allBooks: Book[] = [
     {
       title : "Теплі історії до кави",
-      description : "Надійка Гербіш",
+      author : "Надійка Гербіш",
+      description : "У цій книжці зібрані історії про почуття й настрої, сумніви й рішення, далеку дорогу й затишний дім, чужі міста й близьких людей, солодкий шоколад і терпкувато-гірку каву. У них немає однозначних висновків і незмінних рецептів, а є пошуки та віра в імпровізацію.",
       isFavorite : false
     },
     {
       title : "Шоколад на крутом кипятке",
-      description : "Лаура Эскивель",
+      author : "Лаура Эскивель",
+      description : "Эта книга самым парадоксальным образом сочетает в себе реальность и вымысел, эротику и мистику, историю любви и рецепты блюд мексиканской кухни.",
       isFavorite : true
     },
     {
-      title : "Профессия: ведьма",
-      description : "Ольга Громыко",
+      title : "Spinning Silver",
+      author : "Naomi Novik",
+      description : "The story of Spinning Silver unfolds in the voices of several characters, but primarily in the voices of three young women who struggle against strong evil forces, in an imaginary medieval eastern European kingdom called Lithvas.",
       isFavorite : false
     }
   ];
