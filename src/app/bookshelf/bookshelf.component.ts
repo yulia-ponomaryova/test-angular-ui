@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Book} from "./book.model";
+import {BookService} from "./book.service";
 
 @Component({
   selector: 'app-bookshelf',
@@ -11,24 +12,10 @@ export class BookshelfComponent implements OnInit {
 
   booksOnShelf: Book[];
 
+  constructor(private bookService: BookService) {}
+
   ngOnInit(): void {
-    this.booksOnShelf = JSON.parse(`[
-      {
-        "title" : "Теплі історії до кави",
-        "description" : "Надійка Гербіш",
-        "isFavorite" : false
-      },
-      {
-        "title" : "Шоколад на крутом кипятке",
-        "description" : "Лаура Эскивель",
-        "isFavorite" : true
-      },
-      {
-        "title" : "Профессия: ведьма",
-        "description" : "Ольга Громыко",
-        "isFavorite" : false
-      }
-    ]`);
+    this.booksOnShelf = this.bookService.getAllBooks();
   }
 
 }

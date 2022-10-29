@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import {BookshelfComponent} from "./bookshelf.component";
 
 import {BookItemModule} from "./book-item/book-item.module";
+import {AddBookItemModule} from "./add-book-item/add-book-item.module";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {BookItemModule} from "./book-item/book-item.module";
   ],
   imports: [
     BrowserModule,
-    BookItemModule
+    BookItemModule,
+    AddBookItemModule
   ],
   providers: [],
   exports: [
