@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import {BookshelfModule} from "./bookshelf/bookshelf.module";
+import {AppRoutingModule} from "./app-routing.module";
+import {HeaderModule} from "./header/header.module";
 
 @NgModule({
   declarations: [
@@ -11,7 +13,9 @@ import {BookshelfModule} from "./bookshelf/bookshelf.module";
   ],
   imports: [
     BrowserModule,
-    BookshelfModule
+    BookshelfModule,
+    AppRoutingModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
