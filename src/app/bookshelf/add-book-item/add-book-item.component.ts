@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {BookService} from "../book.service";
+import {BookService} from "../../shared/book.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({

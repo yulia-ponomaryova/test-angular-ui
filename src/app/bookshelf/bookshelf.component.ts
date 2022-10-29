@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Book} from "./book.model";
-import {BookService} from "./book.service";
+import {Book} from "../shared/book.model";
+import {BookService} from "../shared/book.service";
 
 @Component({
   selector: 'app-bookshelf',

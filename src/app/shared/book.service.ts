@@ -34,4 +34,8 @@ export class BookService {
     return this.allBooks.push(book);
   }
 
+  public getLibraryBooks() {
+    return this.allBooks.filter(book => book.isFavorite);
+  }
+
 }
