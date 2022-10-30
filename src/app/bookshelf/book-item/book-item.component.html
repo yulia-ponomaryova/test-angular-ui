@@ -1,14 +1,18 @@
 <mat-card class="book-card">
-  <mat-card-title-group>
-    <mat-card-title>{{book.title}}</mat-card-title>
-    <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
-    <i class="book-card_fav-icon"
-       [ngClass]="showFavorite()"
-       (click)="markFavorite()">
-    </i>
-  </mat-card-title-group>
-  <mat-card-content>
-    {{book.description}}
-  </mat-card-content>
+  <img class="book-card_image"
+       [src]="book.imgUrl">
+  <div>
+    <mat-card-title-group>
+      <mat-card-title>{{book.title}}</mat-card-title>
+      <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+      <i class="book-card_fav-icon"
+         [ngClass]="showFavorite()"
+         (click)="markFavorite()">
+      </i>
+    </mat-card-title-group>
+    <mat-card-content>
+      {{book.description}}
+    </mat-card-content>
+  </div>
 </mat-card>
 

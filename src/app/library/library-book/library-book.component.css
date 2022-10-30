@@ -1,5 +1,11 @@
 .library-book-card {
+  display: flex;
+  gap: 20px;
   background-color: floralwhite;
   max-width: 800px;
   margin: 20px;
+}
+
+.library-book-card_image {
+  height: 150px;
 }
