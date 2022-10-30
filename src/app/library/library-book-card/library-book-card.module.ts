@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {BookItemComponent} from "./book-item.component";
+import {LibraryBookCardComponent} from "./library-book-card.component";
 
 import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
-    BookItemComponent
+    LibraryBookCardComponent
   ],
   imports: [
     BrowserModule,
@@ -15,9 +15,9 @@ import {MatCardModule} from "@angular/material/card";
   ],
   providers: [],
   exports: [
-    BookItemComponent
+    LibraryBookCardComponent
   ],
-  bootstrap: [BookItemComponent]
+  bootstrap: [LibraryBookCardComponent]
 })
-export class BookItemModule {
+export class LibraryBookCardModule {
 }
