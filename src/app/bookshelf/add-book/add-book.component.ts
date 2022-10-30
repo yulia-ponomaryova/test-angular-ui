@@ -1,18 +1,19 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {BookService} from "../../shared/book.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {MatDialogRef} from "@angular/material/dialog";
 
 @Component({
-  selector: 'app-add-book-item',
-  templateUrl: './add-book-item.component.html',
-  styleUrls: ['./add-book-item.component.css'],
+  selector: 'app-add-book',
+  templateUrl: './add-book.component.html',
+  styleUrls: ['./add-book.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AddBookItemComponent implements OnInit {
-
+export class AddBookComponent implements OnInit {
   bookAddForm: FormGroup;
 
-  constructor(private bookService: BookService) {}
+  constructor(public dialogRef: MatDialogRef<AddBookComponent>,
+              private bookService: BookService) {}
 
   ngOnInit(): void {
     this.clearForm();
@@ -21,15 +22,16 @@ export class AddBookItemComponent implements OnInit {
   addBook() {
     let book = this.bookAddForm.value;
     this.bookService.addBook(book);
-    this.clearForm();
+    this.dialogRef.close(true);
   }
 
   clearForm() {
     this.bookAddForm = new FormGroup({
+      imgUrl: new FormControl('', [Validators.required]),
       title: new FormControl('', [Validators.required]),
+      author: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
       isFavorite: new FormControl(false)
     });
   }
-
 }
