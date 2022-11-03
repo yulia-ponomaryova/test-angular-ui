@@ -1,0 +1,16 @@
+.book-card {
+  display: flex;
+  gap: 20px;
+  background-color: floralwhite;
+  max-width: 800px;
+  margin: 20px;
+}
+
+.book-card_image {
+  height: 150px;
+}
+
+.book-card_fav-icon {
+  margin-top: 5px;
+  color: darkred;
+}
