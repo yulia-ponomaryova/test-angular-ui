@@ -1,8 +1,8 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {Book} from "../shared/book.model";
-import {BookService} from "../shared/book.service";
-import {AddBookComponent} from "./add-book/add-book.component";
-import {MatDialog} from "@angular/material/dialog";
+import {Book} from '../shared/book.model';
+import {BookService} from '../shared/book.service';
+import {AddBookComponent} from './add-book/add-book.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-bookshelf',
@@ -11,7 +11,6 @@ import {MatDialog} from "@angular/material/dialog";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookshelfComponent implements OnInit {
-
   booksOnShelf: Book[];
 
   constructor(private bookService: BookService,

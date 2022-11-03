@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {BookService} from "../../shared/book.service";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {MatDialogRef} from "@angular/material/dialog";
+import {BookService} from '../../shared/book.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-book',
@@ -19,13 +19,13 @@ export class AddBookComponent implements OnInit {
     this.clearForm();
   }
 
-  addBook() {
-    let book = this.bookAddForm.value;
+  addBook(): void {
+    const book = this.bookAddForm.value;
     this.bookService.addBook(book);
     this.dialogRef.close(true);
   }
 
-  clearForm() {
+  clearForm(): void {
     this.bookAddForm = new FormGroup({
       imgUrl: new FormControl('', [Validators.required]),
       title: new FormControl('', [Validators.required]),
