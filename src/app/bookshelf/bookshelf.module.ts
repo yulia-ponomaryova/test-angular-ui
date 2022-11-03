@@ -1,10 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import {BookshelfComponent} from "./bookshelf.component";
+import {BookshelfComponent} from './bookshelf.component';
 
-import {BookCardModule} from "./book-card/book-card.module";
-import {AddBookItemModule} from "./add-book-item/add-book-item.module";
+import {BookCardModule} from './book-card/book-card.module';
+import {AddBookItemModule} from './add-book-item/add-book-item.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,6 @@ import {AddBookItemModule} from "./add-book-item/add-book-item.module";
     BookCardModule,
     AddBookItemModule
   ],
-  providers: [],
   exports: [
     BookshelfComponent
   ],

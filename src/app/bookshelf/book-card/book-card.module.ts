@@ -1,9 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import {BookCardComponent} from "./book-card.component";
+import {BookCardComponent} from './book-card.component';
 
-import {MatCardModule} from "@angular/material/card";
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,6 @@ import {MatCardModule} from "@angular/material/card";
     BrowserModule,
     MatCardModule
   ],
-  providers: [],
   exports: [
     BookCardComponent
   ],

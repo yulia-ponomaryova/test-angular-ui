@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Book} from "../shared/book.model";
-import {BookService} from "../shared/book.service";
+import {Book} from '../shared/book.model';
+import {BookService} from '../shared/book.service';
 
 @Component({
   selector: 'app-library',
@@ -17,5 +17,4 @@ export class LibraryComponent implements OnInit {
   ngOnInit(): void {
     this.booksInLibrary = this.bookService.getLibraryBooks();
   }
-
 }

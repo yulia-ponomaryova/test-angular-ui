@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Book} from "../shared/book.model";
-import {BookService} from "../shared/book.service";
+import {Book} from '../shared/book.model';
+import {BookService} from '../shared/book.service';
 
 @Component({
   selector: 'app-bookshelf',
@@ -9,7 +9,6 @@ import {BookService} from "../shared/book.service";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookshelfComponent implements OnInit {
-
   booksOnShelf: Book[];
 
   constructor(private bookService: BookService) {}
@@ -17,5 +16,4 @@ export class BookshelfComponent implements OnInit {
   ngOnInit(): void {
     this.booksOnShelf = this.bookService.getAllBooks();
   }
-
 }

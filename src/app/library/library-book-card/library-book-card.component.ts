@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import {Book} from "../../shared/book.model";
+import {Book} from '../../shared/book.model';
 
 @Component({
   selector: 'app-library-book-card',
@@ -8,7 +8,5 @@ import {Book} from "../../shared/book.model";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LibraryBookCardComponent {
-
   @Input() book: Book;
-
 }
