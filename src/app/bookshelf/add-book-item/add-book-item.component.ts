@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {BookService} from "../book.service";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {BookService} from '../../shared/book.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-book-item',
@@ -9,7 +9,6 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddBookItemComponent implements OnInit {
-
   bookAddForm: FormGroup;
 
   constructor(private bookService: BookService) {}
@@ -18,18 +17,17 @@ export class AddBookItemComponent implements OnInit {
     this.clearForm();
   }
 
-  addBook() {
-    let book = this.bookAddForm.value;
+  addBook(): void {
+    const book = this.bookAddForm.value;
     this.bookService.addBook(book);
     this.clearForm();
   }
 
-  clearForm() {
+  clearForm(): void {
     this.bookAddForm = new FormGroup({
       title: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
       isFavorite: new FormControl(false)
     });
   }
-
 }

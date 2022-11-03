@@ -1,10 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import {HeaderComponent} from "./header.component";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatButtonModule} from "@angular/material/button";
-import {RouterModule} from "@angular/router";
+import {HeaderComponent} from './header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,6 @@ import {RouterModule} from "@angular/router";
     MatToolbarModule,
     MatButtonModule
   ],
-  providers: [],
   exports: [
     HeaderComponent
   ],
