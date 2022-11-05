@@ -21,13 +21,13 @@ export class BookshelfComponent implements OnInit {
     this.booksOnShelf = this.bookService.getAllBooks();
   }
 
-  openAddBookDialog() {
-    let dialogRef = this.dialog.open(AddBookComponent, {
+  openAddBookDialog(): void {
+    this.dialog.open(AddBookComponent, {
       height: '500px',
       width: '600px',
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
+    }).afterClosed().subscribe(bookToAdd => {
+      if (bookToAdd) {
+        this.bookService.addBook(bookToAdd);
         this.changeDetectorRef.detectChanges();
       }
     });
