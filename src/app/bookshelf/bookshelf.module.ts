@@ -4,7 +4,11 @@ import {NgModule} from '@angular/core';
 import {BookshelfComponent} from './bookshelf.component';
 
 import {BookCardModule} from './book-card/book-card.module';
-import {AddBookItemModule} from './add-book-item/add-book-item.module';
+import {AddBookModule} from './add-book/add-book.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -12,8 +16,12 @@ import {AddBookItemModule} from './add-book-item/add-book-item.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     BookCardModule,
-    AddBookItemModule
+    MatDialogModule,
+    AddBookModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     BookshelfComponent

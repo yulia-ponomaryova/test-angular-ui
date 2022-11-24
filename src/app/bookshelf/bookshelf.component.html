@@ -1,4 +1,9 @@
+<button mat-raised-button
+        class="bookshelf_add-button"
+        (click)="openAddBookDialog()">
+  <mat-icon>add</mat-icon>
+  Add Book
+</button>
 <app-book-card *ngFor="let book of booksOnShelf"
                [book]="book">
 </app-book-card>
-<app-add-book-item></app-add-book-item>

@@ -1,26 +1,28 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-import {AddBookItemComponent} from './add-book-item.component';
+import {AddBookComponent} from './add-book.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
-    AddBookItemComponent
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
-    MatCardModule,
     FormsModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
     ReactiveFormsModule
   ],
   exports: [
-    AddBookItemComponent
+    AddBookComponent
   ],
-  bootstrap: [AddBookItemComponent]
+  bootstrap: [AddBookComponent]
 })
-export class AddBookItemModule {
+export class AddBookModule {
 }
