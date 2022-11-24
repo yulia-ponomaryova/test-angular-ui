@@ -18,14 +18,6 @@ export class AddBookComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.clearForm();
-  }
-
-  addBook(): void {
-    this.dialogRef.close(this.bookAddForm.value);
-  }
-
-  clearForm(): void {
     this.bookAddForm = new FormGroup({
       imgUrl: new FormControl('', [Validators.required]),
       title: new FormControl('', [Validators.required]),
@@ -33,5 +25,13 @@ export class AddBookComponent implements OnInit {
       description: new FormControl('', [Validators.required, Validators.maxLength(350)]),
       isFavorite: new FormControl(false)
     });
+  }
+
+  addBook(): void {
+    this.dialogRef.close(this.bookAddForm.value);
+  }
+
+  clearForm(): void {
+    this.bookAddForm.reset();
   }
 }
