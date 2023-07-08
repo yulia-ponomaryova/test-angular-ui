@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
@@ -9,7 +9,7 @@ import {MatDialogRef} from '@angular/material/dialog';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddBookComponent implements OnInit {
-  bookAddForm: FormGroup;
+  bookAddForm: UntypedFormGroup;
 
   constructor(public dialogRef: MatDialogRef<AddBookComponent>) {}
 
@@ -18,12 +18,12 @@ export class AddBookComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.bookAddForm = new FormGroup({
-      imgUrl: new FormControl('', [Validators.required]),
-      title: new FormControl('', [Validators.required]),
-      author: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required, Validators.maxLength(350)]),
-      isFavorite: new FormControl(false)
+    this.bookAddForm = new UntypedFormGroup({
+      imgUrl: new UntypedFormControl('', [Validators.required]),
+      title: new UntypedFormControl('', [Validators.required]),
+      author: new UntypedFormControl('', [Validators.required]),
+      description: new UntypedFormControl('', [Validators.required, Validators.maxLength(350)]),
+      isFavorite: new UntypedFormControl(false)
     });
   }
 
