@@ -23,7 +23,7 @@ export class BookshelfComponent implements OnInit {
 
   openAddBookDialog(): void {
     this.dialog.open(AddBookComponent, {
-      height: '500px',
+      height: 'auto',
       width: '600px',
     }).afterClosed().subscribe(bookToAdd => {
       if (bookToAdd) {
