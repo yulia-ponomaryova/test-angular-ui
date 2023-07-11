@@ -1,5 +1,7 @@
 .book-card {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 20px;
   background-color: floralwhite;
   max-width: 800px;
@@ -8,9 +10,11 @@
 
 .book-card_image {
   height: 150px;
+  margin: 10px;
 }
 
 .book-card_fav-icon {
   margin-top: 5px;
+  margin-right: 15px;
   color: darkred;
 }

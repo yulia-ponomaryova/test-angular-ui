@@ -1,5 +1,7 @@
 .library-book-card {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 20px;
   background-color: floralwhite;
   max-width: 800px;
@@ -8,4 +10,5 @@
 
 .library-book-card_image {
   height: 150px;
+  margin: 10px;
 }
