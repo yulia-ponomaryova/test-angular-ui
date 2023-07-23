@@ -18,7 +18,12 @@ export class BookshelfComponent implements OnInit {
               private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    this.booksOnShelf = this.bookService.getAllBooks();
+    this.bookService.getAllBooks()
+      .subscribe(data => {
+          this.booksOnShelf = data;
+          this.changeDetectorRef.detectChanges();
+        }
+      );
   }
 
   openAddBookDialog(): void {

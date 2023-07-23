@@ -7,6 +7,7 @@ import {BookshelfModule} from './bookshelf/bookshelf.module';
 import {AppRoutingModule} from './app-routing.module';
 import {HeaderModule} from './header/header.module';
 import {LibraryModule} from './library/library.module';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {LibraryModule} from './library/library.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BookshelfModule,
     LibraryModule,
     AppRoutingModule,

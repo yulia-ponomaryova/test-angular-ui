@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Book} from '../shared/book.model';
 import {BookService} from '../shared/book.service';
 
@@ -11,10 +11,15 @@ import {BookService} from '../shared/book.service';
 export class LibraryComponent implements OnInit {
   booksInLibrary: Book[];
 
-  constructor(private bookService: BookService) {
+  constructor(private bookService: BookService,
+              private changeDetectorRef: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
-    this.booksInLibrary = this.bookService.getLibraryBooks();
+    this.bookService.getLibraryBooks()
+      .subscribe(data => {
+        this.booksInLibrary = data;
+        this.changeDetectorRef.detectChanges();
+      });
   }
 }
