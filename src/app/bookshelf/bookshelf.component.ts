@@ -18,6 +18,10 @@ export class BookshelfComponent implements OnInit {
               private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit(): void {
+    this.refreshBookList();
+  }
+
+  refreshBookList() {
     this.bookService.getAllBooks()
       .subscribe(data => {
           this.booksOnShelf = data;
@@ -32,8 +36,8 @@ export class BookshelfComponent implements OnInit {
       width: '600px',
     }).afterClosed().subscribe(bookToAdd => {
       if (bookToAdd) {
-        this.bookService.addBook(bookToAdd);
-        this.changeDetectorRef.detectChanges();
+        this.bookService.addBook(bookToAdd)
+          .subscribe(() => this.refreshBookList());
       }
     });
   }

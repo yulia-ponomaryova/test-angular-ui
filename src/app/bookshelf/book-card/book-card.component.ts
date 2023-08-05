@@ -22,20 +22,11 @@ export class BookCardComponent {
   }
 
   markFavorite(): void {
-    if (!this.book.isFavorite) {
-      this.bookService.addToLibrary(this.book.id)
-        .subscribe(() => {
-            this.book.isFavorite = true;
-            this.changeDetectorRef.detectChanges();
-          }
-        );
-    } else {
-      this.bookService.removeFromLibrary(this.book.id)
-        .subscribe(() => {
-            this.book.isFavorite = false;
-            this.changeDetectorRef.detectChanges();
-          }
-        );
-    }
+    this.bookService.favorBook(this.book.id)
+      .subscribe(() => {
+          this.book.isFavorite = !this.book.isFavorite;
+          this.changeDetectorRef.detectChanges();
+        }
+      );
   }
 }

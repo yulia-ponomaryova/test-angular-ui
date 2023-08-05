@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Book} from './book.model';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -24,20 +24,8 @@ export class BookService {
     return this.http.get<Book[]>(this.apiUrl.concat('/library'));
   }
 
-  public addToLibrary(bookId: string): Observable<any> {
-/*    const headers= new HttpHeaders()
-      .set('content-type', 'application/json')
-      .set('Access-Control-Allow-Origin', '*');*/
-    return this.http.post<Book>(this.apiUrl.concat('/book/').concat(bookId).concat('/library'),
-      true/*, {headers}*/);
-  }
-
-  public removeFromLibrary(bookId: string): Observable<any> {
-/*    const headers= new HttpHeaders()
-      .set('content-type', 'application/json')
-      .set('Access-Control-Allow-Origin', '*');*/
-    return this.http.post<Book>(this.apiUrl.concat('/book/').concat(bookId).concat('/library'),
-      false/*, {headers}*/);
+  public favorBook(bookId: string): Observable<any> {
+    return this.http.get<Book>(this.apiUrl.concat('/book/').concat(bookId).concat('/library'));
   }
 
 }
