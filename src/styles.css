@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  padding: .5rem;
+  max-width: 1000px;
+  margin: auto !important;
+}
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+}
+
